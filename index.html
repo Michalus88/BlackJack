@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bitter:wght@100;500;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/black-jack.css" />
+    <title>BlackJack</title>
+  </head>
+  <body>
+    <section class="black-jack">
+      <header class="black-jack__header">
+        <h1>BlackJack</h1>
+      </header>
+      <div class="black-jack__table">
+        <div id="modal-message" class="modal-message hidden">
+          <p id="message" class="modal-message__content"></p>
+          <input type = "button" id="modal-btn" class="hidden"></>
+        </div>
+        <h2 class="black-jack__table__hand-name">
+          <span>Karty krupiera</span><span id="dealer-points"></span>
+        </h2>
+        <div id="dealer-cards" class="black-jack__table__cards-place"></div>
+        <h2 class="black-jack__table__hand-name">
+          <span>Twoje karty </span> <span id="player-points"></span>
+        </h2>
+        <div id="player-cards" class="black-jack__table__cards-place"></div>
+        <div class="black-jack__table__player-means">
+          <span
+            id="player-bet-on-table"
+            class="black-jack__table__bet-display hidden"
+          ></span>
+          <span id="means" class="black-jack__table__means-display">0$</span>
+        </div>
+      </div>
+      <div id="buttons-container" class="black-jack__buttons-container">
+        <div id="card-handling-buttons" class="black-jack__group-btn hidden">
+          <button id="hit-btn" class="black-jack__button">Dobierz karty</button>
+          <button id="stand-btn" class="black-jack__button">Zostaję</button>
+        </div>
+        <div id="bet-handling-buttons" class="black-jack__group-btn">
+          <input id="betting-slider" type="range" min="0" max="100" value="0" />
+          <div class="black-jack__group-btn__bet-size">
+            Twój zakład : <span id="player-bet"></span>
+          </div>
+          <button
+            type="button"
+            id="bet-btn"
+            class="black-jack__button"
+            data-player-bet
+          >
+            Obstaw
+          </button>
+        </div>
+      </div>
+    </section>
+    <script src="./app/BlackJack.js" type="module"></script>
+  </body>
+</html>
